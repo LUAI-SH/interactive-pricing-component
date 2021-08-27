@@ -14,11 +14,6 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <section class="block">
@@ -57,35 +52,5 @@
         </div>
       </div>
     </section>
-    <!-- Secript -->
-    <script>
-      $("input[type=range]").mousemove(function (e) {
-        var val =
-          ($(this).val() - $(this).attr("min")) /
-          ($(this).attr("max") - $(this).attr("min"));
-        var percent = val * 100;
-
-        $(this).css(
-          "background-image",
-          "-webkit-gradient(linear, left top, right top, " +
-            "color-stop(" +
-            percent +
-            "%, #a5f3eb), " +
-            "color-stop(" +
-            percent +
-            "%, #e3e9f3)" +
-            ")"
-        );
-
-        $(this).css(
-          "background-image",
-          "-moz-linear-gradient(left center, #a5f3eb 0%, #DF7164 " +
-            percent +
-            "%, #e3e9f3 " +
-            percent +
-            "%, #e3e9f3 100%)"
-        );
-      });
-    </script>
   </body>
 </html>
