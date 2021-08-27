@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "name": "interactive-pricing-component",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LUAI-SH/interactive-pricing-component.git",
+  "author": "Luai <eng.luaish@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  }
+}
