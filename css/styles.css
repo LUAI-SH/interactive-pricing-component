@@ -238,7 +238,6 @@ input[type="range"]::-moz-range-thumb {
   /* border: 1px solid red; */
   border-radius: 10px;
   min-width: 35rem;
-  max-width: 60rem;
   background: white;
   box-shadow: 0 20px 40px 10px hsla(0, 0%, 0%, 0.164);
 }
@@ -280,6 +279,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media screen and (min-width: 768px) {
+  .plan {
+    width: 65rem;
+  }
   .plan__header {
     display: grid;
     grid-template-columns: 1fr 1fr;
