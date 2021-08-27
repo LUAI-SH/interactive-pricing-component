@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Order summary component Challenge</title>
+    <link rel="icon" href="images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="block">
+      <div class="block__header">
+        <h1 class="block__heading">Simple, traffic-base pricing</h1>
+        <p>Sign-up for our 30-day trial.</p>
+        <p>No credit card required.</p>
+      </div>
+      <div class="plan">
+        <header class="plan__header">
+          <h2 class="plan__heading">100k Pageviews</h2>
+          <div class="slider-container">
+            <input type="range" min="1" max="100" value="50" />
+          </div>
+          <div class="plan__price-wrapper">
+            <span class="plan__price">$16.00 </span
+            ><span class="cycle">/ month</span>
+          </div>
+          <div class="monthly-payment">
+            <span>monthly billing</span>
+            <label class="switch">
+              <input class="checkbox" type="checkbox" />
+              <span class="toggle toggle--round"></span>
+            </label>
+            <span style="margin-left: 16px">Yearly Billing</span>
+            <span class="badge">-25%</span>
+          </div>
+        </header>
+        <div class="plan__body">
+          <ul class="list list--tick">
+            <li class="list__item">Unlimited websites</li>
+            <li class="list__item">100% data ownership</li>
+            <li class="list__item">Emails reports</li>
+          </ul>
+          <a href="" class="btn">Start my trial</a>
+        </div>
+      </div>
+    </section>
+    <!-- Secript -->
+    <script>
+      $("input[type=range]").mousemove(function (e) {
+        var val =
+          ($(this).val() - $(this).attr("min")) /
+          ($(this).attr("max") - $(this).attr("min"));
+        var percent = val * 100;
+
+        $(this).css(
+          "background-image",
+          "-webkit-gradient(linear, left top, right top, " +
+            "color-stop(" +
+            percent +
+            "%, #a5f3eb), " +
+            "color-stop(" +
+            percent +
+            "%, #e3e9f3)" +
+            ")"
+        );
+
+        $(this).css(
+          "background-image",
+          "-moz-linear-gradient(left center, #a5f3eb 0%, #DF7164 " +
+            percent +
+            "%, #e3e9f3 " +
+            percent +
+            "%, #e3e9f3 100%)"
+        );
+      });
+    </script>
+  </body>
+</html>
